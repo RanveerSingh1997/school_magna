@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_magna/Teacher/teacherChoosePanel.dart';
 import './Student/studentLoginPage.dart';
 
 class SelectionPanel extends StatelessWidget {
@@ -18,7 +19,13 @@ class SelectionPanel extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TeacherChoosePanel()),
+                    );
+                  },
                   textColor: Colors.white,
                   padding: EdgeInsets.all(0.0),
                   child: Container(
@@ -42,7 +49,7 @@ class SelectionPanel extends StatelessWidget {
                 width: double.infinity,
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => StudentPanel()));

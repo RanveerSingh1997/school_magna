@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:school_magna/selectPanel.dart';
+import 'package:school_magna/Teacher/teacherInfoPanel.dart'; 
+ 
 
 void main() {
   runApp(MaterialApp(
@@ -16,21 +17,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("School Magna"),
-        ),
-        body: Center(
-          child: RaisedButton(
-            child: Text('Start'),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SelectionPanel()));
-            },
-          ),
-        ),
-      ),
-    );
+    return TeacherInfoPanel(); 
   }
 }

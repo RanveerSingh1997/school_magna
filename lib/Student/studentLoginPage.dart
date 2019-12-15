@@ -66,7 +66,7 @@ class _StudentPanelState extends State<StudentPanel> {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.push(context,
+                Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => StudentPage()));
               },
               child: Text('Skip'),
